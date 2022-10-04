@@ -1,0 +1,7 @@
+================================
+My questions from the course
+================================
+What is a beans?
+ a serializable object in Java that wraps many objects together
+
+

@@ -1,0 +1,46 @@
+========================
+Intro to Spring
+========================
+Beans are objects in Java, located within Java packages
+The Spring Application Context manages beans
+Spring supports loose-coupling by managing beans
+    - @Component - denotes a Spring bean object
+    - @Autowired - denotes a given bean's dependency
+Spring Framework contains modules for essential operations - Beans, JDBC, Web, AOP, etc
+Spring Projects are additional packages for applications:
+    - Web: microservice web apps
+    - Cloud: native cloud apps
+    - Data: DB API wrapper (?)
+    - Integration: application pattern elements
+    - Security: security solutions
+    - Batch: batch applications utilities
+    - HATEOAS: REST return links/service
+    - Etc: Session, Mobile, Web Services, more...
+Troubleshoot Spring Framework with the debug log:
+    Spring Boot path: src/main/resources/application.properties
+    +++++++++++++++++++++++++++++++
+    logging.level.org.springframework = debug
+    +++++++++++++++++++++++++++++++
+Benefits of Spring Framework:
+    1. Mature testing platforms (JUnit and Mockito)
+    2. Reduces verbosity of simple, routine functions (No plumbing code)
+    3. Modular and flexible architecture
+    4. Continuous improvements
+========================
+Spring Concepts
+========================
+1. Autowiring Types and Qualifiers
+2. Bean Scope & Life Cylce
+3. IOC Container & Applicaton Context
+4. XML & Java Application Contexts
+5. Component Scan
+6. External Properties
+7. Container & Dependency Injection (CDI)
++=+=+=+=+=+=+=+=+=+=
+Autowiring
++=+=+=+=+=+=+=+=+=+=
+Detects initialized beans required for another bean
+Priority must be specified if multiple child beans for a given requirement exist
+Autowiring can be accomplished by name or type
+    - use type+name to solve @Autowired conflict
+
