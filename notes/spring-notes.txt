@@ -43,4 +43,15 @@ Detects initialized beans required for another bean
 Priority must be specified if multiple child beans for a given requirement exist
 Autowiring can be accomplished by name or type
     - use type+name to solve @Autowired conflict
-
+Use @Component for interface implementation classes
++=+=+=+=+=+=+=+=+=+=
+Bean Scope
++=+=+=+=+=+=+=+=+=+=
+Singleton - only one bean instance is created (default)
+Prototype - bean object is created when requested
+specify by using:
+    @Scope(ConfigurableBeanFactory.SCOPE_XXX)
+Cannot nest a SCOPE_PROTOTYPE bean in a SCOPE_SINGLETON bean without a proxy
+    @Scope(value=ConfigurableBeanFactory.SCOPE_XXX, proxyMode=ScopedProxyMode.TARGET_CLASS)
+*Best practice*: to keep instantiated objects to a minimum
+Do not confuse with "Gang of Four" singleton (1 instance per JVM vs. 1 instance per App Context)

@@ -1,14 +1,28 @@
-package net.joemiller.spring.demo;
+package net.joemiller.spring.demo.basic;
 
+import net.joemiller.spring.demo.basic.SortAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
-// Bean managed by Spring
+    @Autowired
+    private SortAlgorithm quickSortAlgorithm;
+    // Dependency of the BinarySearchImpl bean
+    //EXAMPLE: Autowiring by-name (Overridden if @Primary is used on dependency)
+
+    /*
+    EXAMPLE: Autowiring with @Qualifer
+    @Qualifier("quickSortAlgorithm")
     @Autowired
     private SortAlgorithm bubbleSortAlgorithm;
-    // Dependency of the BinarySearchImpl bean
+    */
+
+    /*
+    EXAMPLE: Autowiring by-type (Overridden if @Primary is used on dependency)
+    @Autowired
+    private BubbleSortAlgorithm sortAlgorithm;
+    */
 
     /* Constructor Injection, recommended method for MANDATORY dependencies
     public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
@@ -25,8 +39,8 @@ public class BinarySearchImpl {
 
     public int binarySearch(int[] numbers, int target){
         // Sorting the array
-        int[] sortedNumbers = sortAlgorithm.sort(numbers);
-        System.out.println(sortAlgorithm);
+        int[] sortedNumbers = quickSortAlgorithm.sort(numbers);
+        System.out.println(quickSortAlgorithm);
 
         // search the array
         // return the result

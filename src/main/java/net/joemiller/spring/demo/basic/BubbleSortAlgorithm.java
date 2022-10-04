@@ -1,11 +1,12 @@
-package net.joemiller.spring.demo;
+package net.joemiller.spring.demo.basic;
 
+import net.joemiller.spring.demo.basic.SortAlgorithm;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 // @Primary - already specified with name in BinarySearchImpl
 @Component
-public class BubbleSortAlgorithm implements SortAlgorithm{
+public class BubbleSortAlgorithm implements SortAlgorithm {
 // Bean managed by Sprint
 
 

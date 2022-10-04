@@ -1,9 +1,10 @@
-package net.joemiller.spring.demo;
+package net.joemiller.spring.demo.basic;
 
+import net.joemiller.spring.demo.basic.SortAlgorithm;
 import org.springframework.stereotype.Component;
 
 @Component
-public class QuickSortAlgorithm implements SortAlgorithm{
+public class QuickSortAlgorithm implements SortAlgorithm {
 // Bean managed by Sprint
 
 

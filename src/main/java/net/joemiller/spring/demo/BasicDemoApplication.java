@@ -1,11 +1,12 @@
 package net.joemiller.spring.demo;
 
+import net.joemiller.spring.demo.basic.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class DemoApplication {
+public class BasicDemoApplication {
 
 	public static void main(String[] args) {
 
@@ -16,7 +17,7 @@ public class DemoApplication {
 		//setup application context
 		// Will not start without Beans of type SortAlgorithm
 		// Will not start with >1 Beans of type SortAlgorithm, unless @Primary is used
-		ApplicationContext applicationContext = SpringApplication.run(DemoApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(BasicDemoApplication.class, args);
 
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 		int result = binarySearch.binarySearch(new int[]{12, 4, 6}, 3);
