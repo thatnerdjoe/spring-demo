@@ -1,4 +1,4 @@
-package net.joemiller.spring.demo.scope;
+package net.joemiller.spring.spring_demo.scope;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;

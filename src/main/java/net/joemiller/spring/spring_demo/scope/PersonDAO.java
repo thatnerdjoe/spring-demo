@@ -1,8 +1,6 @@
-package net.joemiller.spring.demo.scope;
+package net.joemiller.spring.spring_demo.scope;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component

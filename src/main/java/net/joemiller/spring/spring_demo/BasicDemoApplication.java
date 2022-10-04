@@ -1,6 +1,6 @@
-package net.joemiller.spring.demo;
+package net.joemiller.spring.spring_demo;
 
-import net.joemiller.spring.demo.basic.BinarySearchImpl;
+import net.joemiller.spring.spring_demo.basic.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

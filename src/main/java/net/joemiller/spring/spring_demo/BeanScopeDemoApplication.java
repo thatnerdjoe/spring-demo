@@ -1,8 +1,6 @@
-package net.joemiller.spring.demo;
+package net.joemiller.spring.spring_demo;
 
-import net.joemiller.spring.demo.basic.BinarySearchImpl;
-import net.joemiller.spring.demo.scope.PersonDAO;
-import org.apache.commons.logging.LogFactory;
+import net.joemiller.spring.spring_demo.scope.PersonDAO;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -11,14 +9,14 @@ import org.slf4j.LoggerFactory;
 
 
 @SpringBootApplication
-public class ScopeDemoApplication {
+public class BeanScopeDemoApplication {
 
 	//Use logger for debugging
-	private static Logger LOGGER = LoggerFactory.getLogger(ScopeDemoApplication.class);
+	private static Logger LOGGER = LoggerFactory.getLogger(BeanScopeDemoApplication.class);
 
 	public static void main(String[] args) {
 
-		ApplicationContext applicationContext = SpringApplication.run(ScopeDemoApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(BeanScopeDemoApplication.class, args);
 
 		PersonDAO personDao = applicationContext.getBean(PersonDAO.class);
 

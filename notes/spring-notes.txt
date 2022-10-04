@@ -27,7 +27,7 @@ Benefits of Spring Framework:
     3. Modular and flexible architecture
     4. Continuous improvements
 ========================
-Spring Concepts
+Basic Spring
 ========================
 1. Autowiring Types and Qualifiers
 2. Bean Scope & Life Cylce
@@ -55,3 +55,9 @@ Cannot nest a SCOPE_PROTOTYPE bean in a SCOPE_SINGLETON bean without a proxy
     @Scope(value=ConfigurableBeanFactory.SCOPE_XXX, proxyMode=ScopedProxyMode.TARGET_CLASS)
 *Best practice*: to keep instantiated objects to a minimum
 Do not confuse with "Gang of Four" singleton (1 instance per JVM vs. 1 instance per App Context)
++=+=+=+=+=+=+=+=+=+=
+Component Scan
++=+=+=+=+=+=+=+=+=+=
+When Spring components are not in the same package, then it will nto be found by the default component scan
+Need to import package and add location into @ComponentScan()
+    @ComponentScan("path.to.package")

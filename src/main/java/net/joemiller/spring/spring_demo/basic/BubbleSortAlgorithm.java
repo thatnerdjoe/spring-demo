@@ -1,7 +1,5 @@
-package net.joemiller.spring.demo.basic;
+package net.joemiller.spring.spring_demo.basic;
 
-import net.joemiller.spring.demo.basic.SortAlgorithm;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 // @Primary - already specified with name in BinarySearchImpl
